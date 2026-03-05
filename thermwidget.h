@@ -12,7 +12,11 @@ private:
     void paintEvent(QPaintEvent* event) override;
 private:
     QPixmap m_thermBg;
+    float m_thermData;
 signals:
+
+public slots:
+    void OnUpdateDataForThermWidget(float);
 };
 
 #endif // THERMWIDGET_H

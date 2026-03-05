@@ -1,6 +1,7 @@
 #include "windowwidget.h"
 #include <QPainter>
 #include<QScreen>
+#include <QThread>
 
 #define WINDOWWIDGET_WIDTH 1200
 #define WINDOWWIDGET_HEIGHT 580
@@ -20,7 +21,13 @@ WindowWidget::WindowWidget(QWidget *parent)
 
     setGeometry(StartX,StartY,WINDOWWIDGET_WIDTH,WINDOWWIDGET_HEIGHT);
 
-    loadChileWidget();
+    workThread = new QThread(this);
+    m_DataWorker = new DataWorker();
+    m_DataWorker->moveToThread(workThread);
+    connect(workThread,&QThread::started,m_DataWorker,&DataWorker::doWork);
+    workThread->start();
+
+    loadFrontWidgets();
 }
 
 void WindowWidget::paintEvent(QPaintEvent *event)
@@ -30,8 +37,9 @@ void WindowWidget::paintEvent(QPaintEvent *event)
     painter.drawPixmap(rect(),m_background);
 }
 
-void WindowWidget::loadChileWidget()
+void WindowWidget::loadFrontWidgets()
 {
     m_ThermWidget = new ThermWidget(this);
+    connect(m_DataWorker,&DataWorker::UpdateDataForThermWidgetSignal,m_ThermWidget,&ThermWidget::OnUpdateDataForThermWidget);
 
 }
