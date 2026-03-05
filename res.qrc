@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ImageResources/background.png</file>
+        <file>ImageResources/digitalClock_bg.png</file>
+        <file>ImageResources/hydro_bg.png</file>
+        <file>ImageResources/motor_bg.png</file>
+        <file>ImageResources/motor_needle.png</file>
+        <file>ImageResources/p_0.png</file>
+        <file>ImageResources/p_1.png</file>
+        <file>ImageResources/p_2.png</file>
+        <file>ImageResources/p_3.png</file>
+        <file>ImageResources/p_4.png</file>
+        <file>ImageResources/p_5.png</file>
+        <file>ImageResources/p_6.png</file>
+        <file>ImageResources/p_7.png</file>
+        <file>ImageResources/p_8.png</file>
+        <file>ImageResources/p_9.png</file>
+        <file>ImageResources/petro_bg1.png</file>
+        <file>ImageResources/petro_bg2.png</file>
+        <file>ImageResources/petro_bg3.png</file>
+        <file>ImageResources/petro_bg4.png</file>
+        <file>ImageResources/petro_bg5.png</file>
+        <file>ImageResources/petro_bg6.png</file>
+        <file>ImageResources/petro_bg7.png</file>
+        <file>ImageResources/petro_bg8.png</file>
+        <file>ImageResources/speed_bg.png</file>
+        <file>ImageResources/speed_needle.png</file>
+        <file>ImageResources/t_0.png</file>
+        <file>ImageResources/t_1.png</file>
+        <file>ImageResources/t_2.png</file>
+        <file>ImageResources/t_3.png</file>
+        <file>ImageResources/t_4.png</file>
+        <file>ImageResources/t_5.png</file>
+        <file>ImageResources/t_6.png</file>
+        <file>ImageResources/t_7.png</file>
+        <file>ImageResources/t_8.png</file>
+        <file>ImageResources/t_9.png</file>
+        <file>ImageResources/t_100.png</file>
+        <file>ImageResources/t_colon.png</file>
+        <file>ImageResources/therm_bg.png</file>
+        <file>ImageResources/timeprogress_bg.png</file>
+        <file>ImageResources/timeprogress_fg.png</file>
+    </qresource>
+</RCC>
