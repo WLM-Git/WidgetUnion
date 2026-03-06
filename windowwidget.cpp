@@ -25,9 +25,20 @@ WindowWidget::WindowWidget(QWidget *parent)
     m_DataWorker = new DataWorker();
     m_DataWorker->moveToThread(workThread);
     connect(workThread,&QThread::started,m_DataWorker,&DataWorker::doWork);
+    connect(workThread,&QThread::finished,m_DataWorker,&QObject::deleteLater);
+
     workThread->start();
 
     loadFrontWidgets();
+}
+
+WindowWidget::~WindowWidget()
+{
+    if(workThread->isRunning())
+    {
+        workThread->quit();
+        workThread->wait();
+    }
 }
 
 void WindowWidget::paintEvent(QPaintEvent *event)
@@ -41,5 +52,11 @@ void WindowWidget::loadFrontWidgets()
 {
     m_ThermWidget = new ThermWidget(this);
     connect(m_DataWorker,&DataWorker::UpdateDataForThermWidgetSignal,m_ThermWidget,&ThermWidget::OnUpdateDataForThermWidget);
+
+    m_HydroWidget = new HydroWidget(this);
+    connect(m_DataWorker,&DataWorker::UpdateDataForThermWidgetSignal,m_HydroWidget,&HydroWidget::OnUpdateDataForHydroWidget);
+
+    m_DigitalClockWidget = new DigitalClockWidget(this);
+
 
 }

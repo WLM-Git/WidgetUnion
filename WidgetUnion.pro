@@ -8,6 +8,8 @@ CONFIG += c++17
 
 SOURCES += \
         dataworker.cpp \
+        digitalclockwidget.cpp \
+        hydrowidget.cpp \
         main.cpp \
         thermwidget.cpp \
         windowwidget.cpp
@@ -19,6 +21,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     dataworker.h \
+    digitalclockwidget.h \
+    hydrowidget.h \
     thermwidget.h \
     windowwidget.h
 

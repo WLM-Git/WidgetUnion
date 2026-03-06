@@ -25,9 +25,9 @@ void ThermWidget::paintEvent(QPaintEvent *event)
     painter.setPen(QPen(QColor(242,93,95),1));
 
     painter.translate(20,155);
-    int fixWidth = 24;
+    int rectWidth = 24;
     int rectHiight = m_thermData*131;
-    painter.drawRect(0,0,fixWidth,-rectHiight);
+    painter.drawRect(0,0,rectWidth,-rectHiight);
     painter.restore();
 }
 
