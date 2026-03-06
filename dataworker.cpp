@@ -3,14 +3,25 @@
 DataWorker::DataWorker(QObject *parent)
     : QObject{parent}
 {
-    startPointX = 0;
+    m_startPointX = 0;
 }
 
 void DataWorker::generateData()
 {
-    float thermValue = std::abs(std::cos(startPointX / 5.0f));
+    float thermValue = std::abs(std::cos(m_startPointX / 5.0f));
     emit UpdateDataForThermWidgetSignal(thermValue);
-    startPointX++;
+    m_startPointX++;
+
+    QDateTime currentDateTime = QDateTime::currentDateTime();
+    QTime currentTime = QTime::currentTime();
+    m_digitalTimeInfo.years = currentDateTime.date().year();
+    m_digitalTimeInfo.months = currentDateTime.date().month();
+    m_digitalTimeInfo.days = currentDateTime.date().day();
+    m_digitalTimeInfo.hours = currentTime.hour();
+    m_digitalTimeInfo.minutes = currentTime.minute();
+    m_digitalTimeInfo.seconds = currentTime.second();
+    m_digitalTimeInfo.temperature = 11;
+    emit UpdateDataForDigitalClockWidgetSignal(m_digitalTimeInfo);
 }
 
 void DataWorker::doWork()

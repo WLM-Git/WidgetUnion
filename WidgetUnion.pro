@@ -20,6 +20,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    DigitalTimeInfo.h \
     dataworker.h \
     digitalclockwidget.h \
     hydrowidget.h \

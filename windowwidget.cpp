@@ -57,6 +57,7 @@ void WindowWidget::loadFrontWidgets()
     connect(m_DataWorker,&DataWorker::UpdateDataForThermWidgetSignal,m_HydroWidget,&HydroWidget::OnUpdateDataForHydroWidget);
 
     m_DigitalClockWidget = new DigitalClockWidget(this);
+    connect(m_DataWorker,&DataWorker::UpdateDataForDigitalClockWidgetSignal,m_DigitalClockWidget,&DigitalClockWidget::OnUpdateDataForDigitalClockWidget);
 
 
 }

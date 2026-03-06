@@ -2,6 +2,10 @@
 #define DATAWORKER_H
 #include <QObject>
 #include <QTimer>
+#include <QDateTime>
+#include <QTime>
+#include "DigitalTimeInfo.h"
+
 
 class DataWorker : public QObject
 {
@@ -12,10 +16,12 @@ private:
 
 private:
     QTimer* m_timer;
-    int startPointX;
+    int m_startPointX;
+    DigitalTimeInfo m_digitalTimeInfo;
 
 signals:
     void UpdateDataForThermWidgetSignal(float);
+    void UpdateDataForDigitalClockWidgetSignal(DigitalTimeInfo);
 public slots:
     void doWork();
     void generateData();
