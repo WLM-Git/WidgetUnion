@@ -15,6 +15,7 @@ void WaveWidget::paintEvent(QPaintEvent *event)
     Q_UNUSED(event);
     QPainter painter(this);
     painter.fillRect(rect(),Qt::black);
+    painter.translate(-m_offsetX,0);
     QPen pen(Qt::green);
     pen.setWidth(2);
     painter.setPen(pen);
@@ -35,5 +36,14 @@ void WaveWidget::OnUpdateDataForWaveWidget(float waveX, float waveY)
     qDebug()<<m_waveX<<"  "<<m_waveY<<Qt::endl;
     m_point.append(QPointF(m_waveX,m_waveY));
 
+    if(m_waveX > WAVEWIDGET_WIDTH)
+    {
+        m_offsetX = m_waveX - WAVEWIDGET_WIDTH;
+    }
+
+    while(!m_point.empty()&&m_point.first().x()<(m_offsetX-10))
+    {
+        m_point.removeFirst();
+    }
     update();
 }

@@ -14,6 +14,7 @@ private:
     float m_waveX;
     float m_waveY;
     QVector<QPointF> m_point;
+    float m_offsetX;
 
 signals:
 public slots:
