@@ -6,7 +6,6 @@
 #include <QTime>
 #include "DigitalTimeInfo.h"
 
-
 class DataWorker : public QObject
 {
     Q_OBJECT

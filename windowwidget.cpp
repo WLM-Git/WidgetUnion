@@ -59,5 +59,7 @@ void WindowWidget::loadFrontWidgets()
     m_DigitalClockWidget = new DigitalClockWidget(this);
     connect(m_DataWorker,&DataWorker::UpdateDataForDigitalClockWidgetSignal,m_DigitalClockWidget,&DigitalClockWidget::OnUpdateDataForDigitalClockWidget);
 
+    m_WaveWidget = new WaveWidget(this);
+
 
 }

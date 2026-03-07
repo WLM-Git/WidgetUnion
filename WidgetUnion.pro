@@ -12,6 +12,7 @@ SOURCES += \
         hydrowidget.cpp \
         main.cpp \
         thermwidget.cpp \
+        wavewidget.cpp \
         windowwidget.cpp
 
 # Default rules for deployment.
@@ -25,6 +26,7 @@ HEADERS += \
     digitalclockwidget.h \
     hydrowidget.h \
     thermwidget.h \
+    wavewidget.h \
     windowwidget.h
 
 RESOURCES += \
