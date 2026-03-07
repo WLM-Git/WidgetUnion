@@ -17,10 +17,13 @@ private:
     QTimer* m_timer;
     int m_startPointX;
     DigitalTimeInfo m_digitalTimeInfo;
+    float m_waveX;
+    float m_waveY;
 
 signals:
     void UpdateDataForThermWidgetSignal(float);
     void UpdateDataForDigitalClockWidgetSignal(DigitalTimeInfo);
+    void UpdateDataForWaveWidgetSignal(float,float);
 public slots:
     void doWork();
     void generateData();

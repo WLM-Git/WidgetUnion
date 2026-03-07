@@ -60,6 +60,5 @@ void WindowWidget::loadFrontWidgets()
     connect(m_DataWorker,&DataWorker::UpdateDataForDigitalClockWidgetSignal,m_DigitalClockWidget,&DigitalClockWidget::OnUpdateDataForDigitalClockWidget);
 
     m_WaveWidget = new WaveWidget(this);
-
-
+    connect(m_DataWorker,&DataWorker::UpdateDataForWaveWidgetSignal,m_WaveWidget,&WaveWidget::OnUpdateDataForWaveWidget);
 }

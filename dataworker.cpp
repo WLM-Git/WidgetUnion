@@ -1,4 +1,5 @@
 #include "dataworker.h"
+#include <cmath>
 
 DataWorker::DataWorker(QObject *parent)
     : QObject{parent}
@@ -22,6 +23,10 @@ void DataWorker::generateData()
     m_digitalTimeInfo.seconds = currentTime.second();
     m_digitalTimeInfo.temperature = 11;
     emit UpdateDataForDigitalClockWidgetSignal(m_digitalTimeInfo);
+
+    m_waveX = m_startPointX * 5;
+    m_waveY = cos(m_waveX / 30)*50+100;
+    emit UpdateDataForWaveWidgetSignal(m_waveX,m_waveY);
 }
 
 void DataWorker::doWork()
