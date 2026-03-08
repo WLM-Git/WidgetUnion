@@ -33,6 +33,11 @@ void DataWorker::generateData()
 
     m_moto = std::cos(m_startPointX/20.0f);
     emit UpdateDataForMotoWidgetSignal(m_moto);
+
+    m_timeProgressRotateValue = std::cos(m_startPointX/20.0f);
+    emit UpdateDataForTimeProgressWidgetSignal(m_timeProgressRotateValue);
+
+
 }
 
 void DataWorker::doWork()

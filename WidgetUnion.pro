@@ -14,6 +14,7 @@ SOURCES += \
         motowidget.cpp \
         petrowidget.cpp \
         thermwidget.cpp \
+        timeprogresswidget.cpp \
         wavewidget.cpp \
         windowwidget.cpp
 
@@ -30,6 +31,7 @@ HEADERS += \
     motowidget.h \
     petrowidget.h \
     thermwidget.h \
+    timeprogresswidget.h \
     wavewidget.h \
     windowwidget.h
 

@@ -67,4 +67,8 @@ void WindowWidget::loadFrontWidgets()
 
     m_MotoWidget = new MotoWidget(this);
     connect(m_DataWorker,&DataWorker::UpdateDataForMotoWidgetSignal,m_MotoWidget,&MotoWidget::OnUpdateMotoWidget);
+
+    m_TimeProgessWidget = new TimeProgressWidget(this);
+    connect(m_DataWorker,&DataWorker::UpdateDataForTimeProgressWidgetSignal,m_TimeProgessWidget,&TimeProgressWidget::OnUpdateDataForTimeProgessWidget);
+
 }

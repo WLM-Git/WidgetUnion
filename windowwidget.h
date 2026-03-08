@@ -9,6 +9,7 @@
 #include "wavewidget.h"
 #include "petrowidget.h"
 #include "motowidget.h"
+#include "timeprogresswidget.h"
 
 class WindowWidget : public QWidget
 {
@@ -29,6 +30,7 @@ private:
     WaveWidget* m_WaveWidget;
     PetroWidget* m_PetroWidget;
     MotoWidget* m_MotoWidget;
+    TimeProgressWidget* m_TimeProgessWidget;
 
 signals:
 };
