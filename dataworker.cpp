@@ -27,6 +27,12 @@ void DataWorker::generateData()
     m_waveX = m_startPointX * 5;
     m_waveY = cos(m_waveX / 30)*50+100;
     emit UpdateDataForWaveWidgetSignal(m_waveX,m_waveY);
+
+    m_petro = std::cos(m_startPointX/40.0f);
+    emit UpdateDataForPetroWidgetSignal(m_petro);
+
+    m_moto = std::cos(m_startPointX/20.0f);
+    emit UpdateDataForMotoWidgetSignal(m_moto);
 }
 
 void DataWorker::doWork()

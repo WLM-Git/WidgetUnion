@@ -7,6 +7,8 @@
 #include "dataworker.h"
 #include "digitalclockwidget.h"
 #include "wavewidget.h"
+#include "petrowidget.h"
+#include "motowidget.h"
 
 class WindowWidget : public QWidget
 {
@@ -25,6 +27,8 @@ private:
     QThread* workThread;
     DigitalClockWidget* m_DigitalClockWidget;
     WaveWidget* m_WaveWidget;
+    PetroWidget* m_PetroWidget;
+    MotoWidget* m_MotoWidget;
 
 signals:
 };

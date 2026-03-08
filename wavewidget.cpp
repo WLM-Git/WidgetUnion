@@ -26,14 +26,12 @@ void WaveWidget::paintEvent(QPaintEvent *event)
         QPointF endPoint = QPointF(m_point.at(i).x(),170);
         painter.drawLine(point,endPoint);
     }
-
 }
 
 void WaveWidget::OnUpdateDataForWaveWidget(float waveX, float waveY)
 {
     m_waveX = waveX;
     m_waveY = waveY;
-    qDebug()<<m_waveX<<"  "<<m_waveY<<Qt::endl;
     m_point.append(QPointF(m_waveX,m_waveY));
 
     if(m_waveX > WAVEWIDGET_WIDTH)

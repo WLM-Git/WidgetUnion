@@ -11,6 +11,8 @@ SOURCES += \
         digitalclockwidget.cpp \
         hydrowidget.cpp \
         main.cpp \
+        motowidget.cpp \
+        petrowidget.cpp \
         thermwidget.cpp \
         wavewidget.cpp \
         windowwidget.cpp
@@ -25,6 +27,8 @@ HEADERS += \
     dataworker.h \
     digitalclockwidget.h \
     hydrowidget.h \
+    motowidget.h \
+    petrowidget.h \
     thermwidget.h \
     wavewidget.h \
     windowwidget.h

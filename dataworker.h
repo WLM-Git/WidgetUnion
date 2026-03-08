@@ -19,11 +19,16 @@ private:
     DigitalTimeInfo m_digitalTimeInfo;
     float m_waveX;
     float m_waveY;
+    float m_petro;
+    float m_moto;
 
 signals:
     void UpdateDataForThermWidgetSignal(float);
     void UpdateDataForDigitalClockWidgetSignal(DigitalTimeInfo);
     void UpdateDataForWaveWidgetSignal(float,float);
+    void UpdateDataForPetroWidgetSignal(float);
+    void UpdateDataForMotoWidgetSignal(float);
+
 public slots:
     void doWork();
     void generateData();

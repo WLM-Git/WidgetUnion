@@ -61,4 +61,10 @@ void WindowWidget::loadFrontWidgets()
 
     m_WaveWidget = new WaveWidget(this);
     connect(m_DataWorker,&DataWorker::UpdateDataForWaveWidgetSignal,m_WaveWidget,&WaveWidget::OnUpdateDataForWaveWidget);
+
+    m_PetroWidget = new PetroWidget(this);
+    connect(m_DataWorker,&DataWorker::UpdateDataForPetroWidgetSignal,m_PetroWidget,&PetroWidget::OnUpdatePetroWidget);
+
+    m_MotoWidget = new MotoWidget(this);
+    connect(m_DataWorker,&DataWorker::UpdateDataForMotoWidgetSignal,m_MotoWidget,&MotoWidget::OnUpdateMotoWidget);
 }

@@ -8,6 +8,7 @@
 DigitalClockWidget::DigitalClockWidget(QWidget *parent)
     : QWidget{parent}
 {
+    m_currentTimeInfo = {0, 0, 0, 0, 0, 0, 0};
     setGeometry(250,70,DIGITALCLOCK_WIDTH,DIGITALCLOCK_HEIGHT);
     loadFrontWidget();
 }
@@ -92,7 +93,6 @@ void DigitalClockWidget::paintEvent(QPaintEvent *event)
         painter.drawPixmap(QRect(320,80,28,56),m_digitalNumbers.at(m_currentTimeInfo.seconds/10));
     }
     painter.drawPixmap(QRect(360,80,28,56),m_digitalNumbers.at(m_currentTimeInfo.seconds%10));
-
 }
 
 void DigitalClockWidget::OnUpdateDataForDigitalClockWidget(DigitalTimeInfo digitalTimeInfo)
