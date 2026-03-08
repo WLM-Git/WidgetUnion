@@ -22,6 +22,7 @@ private:
     float m_petro;
     float m_moto;
     float m_timeProgressRotateValue;
+    float m_speedValue;
 
 signals:
     void UpdateDataForThermWidgetSignal(float);
@@ -30,6 +31,7 @@ signals:
     void UpdateDataForPetroWidgetSignal(float);
     void UpdateDataForMotoWidgetSignal(float);
     void UpdateDataForTimeProgressWidgetSignal(float);
+    void UpdateDataForSpeedWidgetSignal(float);
 
 public slots:
     void doWork();

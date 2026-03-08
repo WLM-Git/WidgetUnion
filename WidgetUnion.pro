@@ -13,6 +13,7 @@ SOURCES += \
         main.cpp \
         motowidget.cpp \
         petrowidget.cpp \
+        speedwidget.cpp \
         thermwidget.cpp \
         timeprogresswidget.cpp \
         wavewidget.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     hydrowidget.h \
     motowidget.h \
     petrowidget.h \
+    speedwidget.h \
     thermwidget.h \
     timeprogresswidget.h \
     wavewidget.h \

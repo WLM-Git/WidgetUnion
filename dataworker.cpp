@@ -37,7 +37,8 @@ void DataWorker::generateData()
     m_timeProgressRotateValue = std::cos(m_startPointX/20.0f);
     emit UpdateDataForTimeProgressWidgetSignal(m_timeProgressRotateValue);
 
-
+    m_speedValue = std::cos((m_startPointX/15.0f));
+    emit UpdateDataForSpeedWidgetSignal(m_speedValue);
 }
 
 void DataWorker::doWork()

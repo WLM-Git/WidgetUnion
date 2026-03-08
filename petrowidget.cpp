@@ -18,7 +18,6 @@ PetroWidget::PetroWidget(QWidget *parent)
 void PetroWidget::OnUpdatePetroWidget(float petro)
 {
     m_petroValue = (int)qAbs(qAbs(petro * 80) - 80);
-    qDebug()<<m_petroValue<<Qt::endl;
     update();
 }
 

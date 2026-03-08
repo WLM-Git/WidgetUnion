@@ -71,4 +71,6 @@ void WindowWidget::loadFrontWidgets()
     m_TimeProgessWidget = new TimeProgressWidget(this);
     connect(m_DataWorker,&DataWorker::UpdateDataForTimeProgressWidgetSignal,m_TimeProgessWidget,&TimeProgressWidget::OnUpdateDataForTimeProgessWidget);
 
+    m_SpeedWidget = new SpeedWidget(this);
+    connect(m_DataWorker,&DataWorker::UpdateDataForSpeedWidgetSignal,m_SpeedWidget,&::SpeedWidget::OnUpdateDataForSpeedWidget);
 }
