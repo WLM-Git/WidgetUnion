@@ -13,7 +13,7 @@ MotoWidget::MotoWidget(QWidget *parent)
 
 void MotoWidget::OnUpdateMotoWidget(float rotateValue)
 {
-    m_rotateValue = (float)qAbs(qAbs(rotateValue)-1)*180.0 - 90;
+    m_rotateValue = -rotateValue * 90.0f;
     update();
 }
 
